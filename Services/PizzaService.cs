@@ -25,7 +25,7 @@ public static class PizzaService
         Pizzas.Add(pizza);
     }
 
-    public static voic Delete(int id)
+    public static void Delete(int id)
     {
         var pizza = Get(id);
         if (pizza is null)
@@ -36,7 +36,7 @@ public static class PizzaService
 
     public static void Update(Pizza pizza)
     {
-        var index = Pizzas.FindIndex(p => p.id == pizza.Id);
+        var index = Pizzas.FindIndex(p => p.Id == pizza.Id);
         if (index == -1)
             return;
 
